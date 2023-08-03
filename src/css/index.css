@@ -1,0 +1,164 @@
+body {
+    background-color: #000;
+}
+
+body::before {
+    content: '';
+    background-image: url(../imgs/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.head {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.head #title {
+    color: #ddd;
+    font-size: 50px;
+    font-weight: 900;
+    letter-spacing: 10px;
+}
+
+.head .navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px 50px;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.head .navigation .link-nav {
+    color: #b69fdb;
+    font-size: 25px;
+    font-weight: 400;
+    position: relative;
+    transition: .3s ease;
+}
+
+.navigation .link-nav:hover {
+    transform: scale(1.2);
+    color: #ddd;
+}
+
+.navigation .link-nav::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation .link-nav:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+main {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #18014485;
+    padding: 30px 30px 50px;
+    box-shadow: 0px 0px 10px #080114d3;
+    color: #ddd;
+    width: 100%;
+}
+
+.wrapper .title {
+    color: #d1bff3;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
+
+.wrapper .box-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px 60px;
+}
+
+.wrapper .box-imgs .imgs {
+    width: 180px;
+    height: 250px;
+}
+
+.wrapper .subtitle {
+    font-weight: 400;
+    letter-spacing: 7px;
+    font-size: 35px;
+    margin: 50px 0;
+}
+
+.wrapper .livros-unicos {
+    margin-top: 50px;
+}
+
+footer {
+    background-color: #11032b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+footer .btn-inicio {
+    width: 100%;
+    background-color: #160436;
+    color: #cec6dd;
+    padding: 10px 0;
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 20px;
+    transition: .3s ease;
+}
+
+footer .btn-inicio:hover {
+    background-color: #1b0642;
+    cursor: pointer;
+}
+
+footer span {
+    font-weight: 100;
+    color: #cdb2ff;
+}
+
+@media (max-width: 1120px) {
+    main {
+        padding: 0 20px;
+    }
+    
+    .wrapper {
+        padding: 30px 10px 50px;
+    }
+    
+    .wrapper .box-imgs {
+        gap: 50px 31px;
+    }
+}
